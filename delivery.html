@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+   
+
+   
+<head> 
+    <link rel="shortcut icon" type="image/x-icon" href="coffea.jpg">
+    <title>Order Form</title>
+    <link href="delivery.css" rel="stylesheet">
+  
+    <script>
+        function displayReceipt() {
+            var name = document.getElementById("name").value;
+            var contactNumber = document.getElementById("contactNumber").value;
+            var Address = document.getElementById("Address").value;
+            var espresso = document.getElementById("espresso").value;
+            var quantity = document.getElementById("quantity").value;
+            var mop = document.getElementById("mop").value;
+            var price = 0;
+            
+            // Calculate the price based on the selected product
+            if (espresso === "1") {
+                price = 75;
+            } else if (espresso === "2") {
+                price = 90;
+            } else if (espresso === "3") {
+                price = 85;
+            }else if (espresso === "4") {
+                price = 85;
+            }else if (espresso === "5") {
+                price = 100;
+            }else if (espresso === "6") {
+                price = 120;
+            }else if (espresso === "7") {
+                price = 100;
+            }else if (espresso === "8") {
+                price = 120;
+            }else if (espresso === "9") {
+                price = 100;
+            }else if (espresso === "10") {
+                price = 120;
+            }else if (espresso === "11") {
+                price = 100;
+            }else if (espresso === "12") {
+                price = 120;
+            }else if (espresso === "13") {
+                price = 100;
+            }else if (espresso === "14") {
+                price = 120;
+            }else if (espresso === "15") {
+                price = 100;
+            }else if (espresso === "16") {
+                price = 120;
+            }else if (espresso === "17") {
+                price = 120;
+            }else if (espresso === "18") {
+                price = 120;
+            }else if (espresso === "19") {
+                price = 120;
+            }else if (espresso === "20") {
+                price = 120;
+            }else if (espresso === "21") {
+                price = 120;
+            }
+            
+            var amount = price * quantity + 40;
+            
+            document.getElementById("receipt-name").textContent = name;
+            document.getElementById("receipt-contactNumber").textContent = contactNumber;
+            document.getElementById("receipt-Address").textContent = Address;
+            document.getElementById("receipt-espresso").textContent = espresso;
+            document.getElementById("receipt-quantity").textContent = quantity;
+            document.getElementById("receipt-mop").textContent = mop;
+            document.getElementById("receipt-amount").textContent = "php" + amount.toFixed(2);
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        
+
+
+        <form>
+            <h2>Order Form</h2>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="contactNumber">Contact Number:</label>
+            <input type="text" id="contactNumber" name="contactNumber" required>
+
+            <label for="Address">Address:</label>
+            <input type="text" id="Address" name="Address" required>
+
+
+            <label for="espresso">Espresso Based:</label>
+            <select id="espresso" name="espresso" required>
+                <option value="">Select a product</option>
+                <option value="1">Americano (HOT 75php)</option>
+                <option value="2">Americano (ICED 90php)</option>
+                <option value="3">Cappuccino (HOT 85php)</option>
+                <option value="4">Flat White (HOT 85php)</option>
+                <option value="5">Cafe Latte Caramel(HOT 100php)</option>
+                <option value="6">Cafe Latte Caramel(ICED 120php)</option>
+                <option value="7">Cafe Latte Hazelnut(HOT 100php)</option>
+                <option value="8">Cafe Latte Hazelnut(ICED 120php)</option>
+                <option value="9">Cafe Latte Vanilla(HOT 100php)</option>
+                <option value="10">Cafe Latte Vanilla(ICED 120php)</option>
+                <option value="11">Cafe Mocha (HOT 100php)</option>
+                <option value="12">Cafe Mocha (ICED 120php)</option>
+                <option value="13">Spanish Latte (HOT 100php)</option>
+                <option value="14">Spanish Latte (ICED 120php)</option>
+                <option value="15">While Mocho (HOT 100php)</option>
+                <option value="16">While Mocho (ICED 120php)</option>
+                <option value="17">Cinnamon Dolce Lotte  (HOT 120php)</option>
+                <option value="18">Cinnamon Dolce Lotte  (ICED 120php)</option>
+                <option value="19">Caramel Macchiato(ICED 120php)</option>
+                <option value="20">Salted Caramel (ICED 120php)</option>
+                <option value="21">Miky Cheese Lotte  (ICED 120php)</option>
+            </select>
+
+            <label for="quantity">Quantity:</label>
+            <input type="text" id="quantity" name="quantity" required>
+            
+            <label for="mop">Mode of Payment:</label>
+            <select type="text" id="mop" name="mop" required>
+           
+                <option value="COD">COD</option>
+                <option value="GCASH">GCASH</option>
+                <option value="Paymaya">Paymaya</option>
+                
+            </select>
+            
+           
+
+            <input type="submit" value="Place Order" onclick="displayReceipt(); return false;">
+           
+
+           
+        </form>
+        <div class="receipt">
+            <h2>Receipt</h2>
+            <p><strong>Name:</strong> <span id="receipt-name"></span></p>
+            <p><strong>Contact Number:</strong> <span id="receipt-contactNumber"></span></p>
+            <p><strong>Address:</strong> <span id="receipt-Address"></span></p>
+            <p><strong>Espresso:</strong> <span id="receipt-espresso"></span></p>
+            <p><strong>Quantity:</strong> <span id="receipt-quantity"></span></p>
+            <p><strong>mop:</strong> <span id="receipt-mop"></span></p>
+            <p><strong>Amount (+40 Sf):</strong> <span id="receipt-amount"></span></p>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2023 COFFEA</p>
+    </footer>
+</body>
+</html>

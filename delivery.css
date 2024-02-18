@@ -1,0 +1,51 @@
+body {
+    background-image: url(cover.png);
+    background-repeat: no-repeat;
+    background-attachment: local;
+    background-size: cover;
+}
+.container {
+    display: flex;
+    justify-content: justify;
+    align-items: center;
+    height: 80vh;
+}
+
+
+form {
+    width: 400px;
+    padding: 20px;
+    border: 1px white;
+    color: white;
+    border-radius: 5px;
+    background-color: transparent;
+}
+input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid beige;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 10px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
+input[type=submit] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+   border: white;
+    border-radius: 6px;
+    cursor: pointer;
+}
+.receipt {
+    margin-top: 10px;
+    border: 5px solid beige;
+    padding: 60px;
+    background-color: whitesmoke;
+    margin-left: 600px;
+    margin-bottom: 200px;
+}
+.receipt p {
+    margin: 10;
+}

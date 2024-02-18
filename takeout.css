@@ -1,0 +1,170 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0px;
+    padding: 20px;
+    text-align: center;
+    background-image: url(shop3.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+
+  h1 {
+    text-align: center;
+    background-image: url(khaki.jpg);
+    background-size: cover;
+    border-radius: 30px;
+    padding: 50px;
+    border-style: outset;
+    border-color: black;
+    font-family: 'Quicksand', 'sans-serif';
+  }
+  
+h2 {
+  font-family: 'Quicksand', 'sans-serif';
+  color:beige;
+}
+
+  table {
+    width: 100%;
+    text-align: center;
+    color: black;
+    border-collapse: collapse;
+    background-color: beige;
+    border-style: outset;
+  }
+  
+  th, td {
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px solid black;
+    border-top: black;
+  }
+  
+  th {
+    background-color: burlywood;
+    text-align: center;
+    border-top: black;
+    border-bottom: black;
+  }
+  
+  tr:hover {
+    background-color: white;
+    text-align: center;
+    border: black;
+  }
+  
+  h3 {
+    font-size: 25px;
+    font-family:'Times New Roman', Times, serif
+  }
+  
+  form {
+    padding: 50px; 
+    background-color: burlywood;
+    border-radius: 30px;
+    border-style: outset;
+    border-color: beige;
+    width: 300px;
+    position: absolute;
+    bottom: -350;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+input[type="name"],
+input[type="address"],
+textarea[type="message"] {
+
+  border-radius: 10px;
+  width: 200px;
+}
+
+ #name{
+    height: 25px;
+    width: 250px;
+    border-radius: 10px;
+    margin: 10px;
+  }
+
+  #address{
+    height: 25px;
+    width: 250px;
+    margin: 10px;   
+  }
+
+  #message{
+    border-radius: 10px;
+    height: 70px;
+    width: 250px;
+    resize: none;
+    overflow: hidden;
+    margin: 10px;
+  }
+
+  #submit{
+    background-color: rgb(38, 211, 38);
+    height: 50px;
+    width: 100px;
+    border-style: solid;
+    border-color: #fff;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 18px;
+    font-family: 'Lato', Courier, monospace;
+    cursor: pointer;
+   }
+
+  .popup .overlay {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.7);
+    z-index: 1;
+    display: none;
+  }
+
+  .popup .content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    background: #fff;
+    width: 450px;
+    height: 220px;
+    z-index: 2;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+
+  }
+
+  .popup .close-btn {
+
+    position:absolute;
+    right: 20px;
+    top: 20px;
+    width:30px;
+    height:30px;
+    background:#222;
+    color:#fff;
+    font-size:25px;
+    font-weight:600;
+    line-height:30px;
+    text-align:center;
+    border-radius: 50%;
+    }
+
+  .popup.active .overlay {
+    display: block;
+  }
+
+  .popup.active .content {
+      
+    transition: all 300ms ease-in-out;
+    transform: translate(-50%, -50%) scale(0);
+
+    }

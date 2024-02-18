@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="shortcut icon" type="image/x-icon" href="coffea.jpg">
+    <link href="reservation.css" rel="stylesheet">
+    <title>Reservation</title>
+   
+</head>
+<body>
+    <h1>Reservation</h1>
+
+    <form id="reservationForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="phone">Phone:</label>
+        <input type="text" id="phone" name="phone" required>
+
+        <label for="date">Date:</label>
+        <input type="date" id="date" name="date" required>
+
+        <label for="time">Time:</label>
+        <input type="time" id="time" name="time" required>
+
+        <label for="number-of-guests">Number of Guests:</label>
+        <input type="number" id="number-of-guests" name="number-of-guests" required>
+
+        <input type="submit" value="Make Reservation">
+    </form>
+
+    <!-- Reservation Slip -->
+    <div id="reservationslip" class="reservation-slip">
+        <h2>Reservation Slip</h2>
+        <p><strong>Name:</strong> <span id="slipName"></span></p>
+        <p><strong>Email:</strong> <span id="slipEmail"></span></p>
+        <p><strong>Phone:</strong> <span id="slipPhone"></span></p>
+        <p><strong>Date:</strong> <span id="slipDate"></span></p>
+        <p><strong>Time:</strong> <span id="slipTime"></span></p>
+        <p><strong>Number of Guests:</strong> <span id="slipGuest"></span></p>
+    </div>
+
+    <div id="popup">
+        <h2>Thank you for your submission!</h2>
+        <p>Name: <span id="popupName"></span></p>
+        <p>Email: <span id="popupEmail"></span></p>
+        <p>Number of Guests: <span id="popupGuest"></span></p>
+    </div>
+    
+    <!-- Overlay to darken the background when the pop-up is shown -->
+    <div id="overlay"></div>
+    
+    <script>
+        document.getElementById('reservationForm').addEventListener('submit', function (event) {
+            event.preventDefault(); // Prevent the default form submission behavior
+    
+            // Get form values
+            var name = document.getElementById('name').value;
+            var email = document.getElementById('email').value;
+            var phone = document.getElementById('phone').value;
+            var date = document.getElementById('date').value;
+            var time = document.getElementById('time').value;
+            var guests = document.getElementById('number-of-guests').value;
+    
+            // Display values in the pop-up and reservation slip
+            document.getElementById('slipName').textContent = name;
+            document.getElementById('slipEmail').textContent = email;
+            document.getElementById('slipPhone').textContent = phone;
+            document.getElementById('slipDate').textContent = date;
+            document.getElementById('slipTime').textContent = time;
+            document.getElementById('slipGuest').textContent = guests;
+    
+            document.getElementById('popupName').textContent = name;
+            document.getElementById('popupEmail').textContent = email;
+            document.getElementById('popupGuest').textContent = guests;
+            
+    
+            // Show the pop-up and overlay
+            document.getElementById('popup').style.display = 'block';
+            document.getElementById('overlay').style.display = 'block';
+        });
+    
+        // Close the pop-up and overlay when clicking outside the pop-up
+        document.getElementById('overlay').addEventListener('click', function () {
+            document.getElementById('popup').style.display = 'none';
+            document.getElementById('overlay').style.display = 'none';
+        });
+    </script>
+</body>
+</html>

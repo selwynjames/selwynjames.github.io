@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Home Page</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel ="icon" type="img/jpg" href="bg.png">
+		<link rel="stylesheet" type="text/css" href="home.css">
+		<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+		
+	</head>
+	<body>
+	<div class="navbar">
+        <div>
+            <img src="bg.png" alt="Logo" class="logo" >
+	    </div>
+        <ul class="fonts">
+			<li><a href="about.html">About Us</a></li>
+            <li><a href="menu.html">Menu</a></li>
+        </ul>
+		
+        </div>
+		<br>
+    </div>
+<body background="khaki.jpg"></body>
+    <div class="content">
+		<h1>COFFEA
+		<br>			
+	<div class="slideshow-container">
+	<div class="mySlides fade">
+	  <img src="cookiesncafe.jpg" style="width: 90%;">
+	</div>
+
+	<div class="slideshow-container">
+	<div class="mySlides fade">
+		<img src="churros.jpg" style="width: 90%;">
+	</div>
+
+	<div class="slideshow-container">
+	<div class="mySlides fade">
+		<img src="cheesybaconfries.jpg" style="width: 90%;">
+	</div>
+
+	<div class="slideshow-container">
+	<div class="mySlides fade">
+		<img src="tuna.jpg" style="width: 90%;"> 
+	</div>
+
+	<div class="slideshow-container">
+	<div class="mySlides fade">
+		<img src="cookies.jpg" style="width: 90%;">	 	
+    </div>
+
+		<div style="text-align:center">	
+		  <span class="dot"></span> 
+		  <span class="dot"></span> 
+		  <span class="dot"></span> 
+		  <span class="dot"></span> 
+		  <span class="dot"></span> 
+	    </div>
+
+		<p header="description">Take Your Picks</p>
+		<div style="text-align:left">	
+	   <div class="image-container">
+		<img src="matchadiff.jpg" alt="Image 1" style="width: 30%;">
+		<img src="sl.jpg" alt="Image 2"  style="width: 30%;">
+		<img src="house.jpg" alt="Image 3"  style="width: 30%;">
+    </div>
+
+	<div class="button">
+		<a href="dinein.html">Shop Now</a>
+		</div>
+	
+<script>
+let slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 3000); // Change image every 3 seconds
+}
+</script>
+	</body>
+</html>

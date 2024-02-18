@@ -1,0 +1,49 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+    background-color: beige;
+  }
+  
+  h1 {
+    text-align: center;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+    color: black;
+  }
+  
+  th, td {
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px solid black;
+    border-top: black;
+  }
+  
+  th {
+    background-color: burlywood;
+    text-align: center;
+    border-top: black;
+    border-bottom: black;
+  }
+  
+  tr:hover {
+    background-color: white;
+    text-align: center;
+    border: black;
+  }
+  div {
+      background-color: #4CAF50;
+      
+     
+      margin: 10%;
+      margin-left: 35%;
+      margin-right: 35%;
+      padding: 30px;
+      cursor: pointer;
+    }
+   
